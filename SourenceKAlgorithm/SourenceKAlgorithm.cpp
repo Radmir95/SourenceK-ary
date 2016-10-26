@@ -49,9 +49,10 @@ void initializeTables()
 {
 	tableI = new int[k];	
 	tableG = new int[k];
+	tableA = new int[k];
 }
 
-void fillTableI()
+void fillTablesIAndG()
 {
 	for (int i = 0; i < k; i++)
 	{
@@ -59,9 +60,27 @@ void fillTableI()
 	}
 }
 
-void printTable(int *table)
+void fillTableA()
 {
 
+	
+
+	for (int i = 1; i < k+1; i++)
+	{
+
+		for(int j = 1; j < k+1; j++)
+		{
+			
+
+			
+		}
+		
+	}
+
+}
+
+void printTable(int *table)
+{
 	for(int i = 0; i < k; i++)
 	{
 		cout << table[i] << " ";
@@ -80,17 +99,24 @@ int TakingModInUpSide(int number, int mod)
 
 }
 
+void prepareStep()
+{
+	
+	initializeTables();
+	fillTablesIAndG();
+	fillTableA();
+}
+
 // главная фукнция
 int main(void)
 {
 	printf("Enter k:");
 	cin >> k;
 
-	initializeTables();
-
-	fillTableI();
-
-	printTable(tableG);
+	printf("Enter u and v:");
+	cin >> u >> v;
+	
+	//printTable(tableG);
 	
 	system("pause");
 
